@@ -22,7 +22,7 @@ function createCard(character) {
 export function renderCharacters(list) {
     charactersContainer.innerHTML = "";
     if (list.length === 0) {
-        charactersContainer.innerHTML = "<p>Aucun personnage de cette maison parmi les 20 premiers.</p>";
+        charactersContainer.innerHTML = "<p>Aucun personnage trouvé.</p>";
         return;
     }
     list.forEach((character) => charactersContainer.appendChild(createCard(character)));
