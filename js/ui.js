@@ -4,14 +4,17 @@ function createCard(character) {
     const name = character.name?.trim() || "Inconnu";
     const image = character.image || "./images/troll.jpg";
     const house = character.house?.trim().toLowerCase() || "";
+    const link = character.id ? `details.html?id=${character.id}` : "#";
 
     const card = document.createElement("div");
     if (house) {
         card.classList.add(`house-${house}`);
     }
     card.innerHTML = `
-        <img src="${image}" alt="${name}" />
-        <p>${name}</p>
+        <a href="${link}">
+            <img src="${image}" alt="${name}" />
+            <p>${name}</p>
+        </a>
     `;
     return card;
 }
