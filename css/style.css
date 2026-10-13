@@ -84,9 +84,6 @@ footer p {
 }
 .header__left {
   width: 100%;
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
 }
 .header__left ul {
   display: flex;
@@ -161,8 +158,9 @@ footer p {
   width: 100%;
 }
 .page_perso .perso__right > div {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
 }
 .page_perso .perso__right p.attr {
   font-weight: bold;
@@ -173,6 +171,7 @@ footer p {
 }
 .page_perso figure img {
   width: 100%;
+  display: block;
 }
 .page_perso figure figcaption {
   background: rgba(255, 255, 255, 0.5);
@@ -180,12 +179,17 @@ footer p {
   align-items: center;
   height: 66px;
   justify-content: center;
+  text-align: center;
   font-size: 20px;
 }
 .page_perso .house__perso {
+  padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.page_perso .house__perso img {
+  width: 250px;
 }
 
 @media screen and (max-width: 425px) {
@@ -193,7 +197,7 @@ footer p {
     width: 90%;
   }
   header h1,
-header ul {
+  header ul {
     display: none !important;
   }
   header .header__left {
@@ -204,10 +208,15 @@ header ul {
     display: block !important;
     height: 70px;
   }
-
   .houses {
     flex-direction: column;
     align-content: space-around;
+  }
+  .page_perso .perso {
+    flex-direction: column;
+  }
+  .page_perso figure {
+    margin: 0 auto 30px auto;
   }
 }
 

@@ -165,8 +165,9 @@ footer {
       justify-content: space-between;
       width: 100%;
       & > div {
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
       }
 
       p.attr {
@@ -180,6 +181,7 @@ footer {
     margin-right: 120px;
     img {
       width: 100%;
+      display: block;
     }
 
     figcaption {
@@ -188,6 +190,7 @@ footer {
       align-items: center;
       height: 66px;
       justify-content: center;
+      text-align: center;
       font-size: 20px;
     }
   }
@@ -196,6 +199,9 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    img {
+      width: 250px;
+    }
   }
 }
 
@@ -220,5 +226,12 @@ footer {
   .houses {
     flex-direction: column;
     align-content: space-around;
+  }
+
+  .page_perso .perso {
+    flex-direction: column;
+  }
+  .page_perso figure {
+    margin: 0 auto 30px auto;
   }
 }
