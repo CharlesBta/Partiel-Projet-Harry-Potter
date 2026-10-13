@@ -183,7 +183,6 @@ footer p {
   font-size: 20px;
 }
 .page_perso .house__perso {
-  padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,6 +206,32 @@ footer p {
   header .header__left img {
     display: block !important;
     height: 70px;
+  }
+  header.menu-open {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  header.menu-open .header__left {
+    display: contents;
+  }
+  header.menu-open .header__right {
+    margin-left: 5%;
+  }
+  header.menu-open .header__left img {
+    margin-left: auto;
+    margin-right: 5%;
+  }
+  header.menu-open ul {
+    display: flex !important;
+    order: 1;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  header.menu-open ul li {
+    padding: 10px 0;
   }
   .houses {
     flex-direction: column;
